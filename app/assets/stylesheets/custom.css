@@ -5,10 +5,10 @@ body {
 
 #map-canvas {
         height: 500px;
-        width: 100%;
+        width: 95%;
         margin-top:  20px;
-        padding: 0px
-        border: 5px solid;
+        padding: 0px,
+        border: 1px solid;
         border-radius: 25px;
       }
 
@@ -25,11 +25,43 @@ h4 {
     line-height: .8;
 }
 
+/* ========= Landing Page ======== */
+
 .main-img {
     height:800px;
     width:100%;
     opacity: 0.8;
     min-height: 400px;
+}
+
+.relative-pos {
+    position:relative;
+    
+}
+
+.absolute-pos {
+    position:absolute;
+}
+
+#section1 {
+  overflow: hidden;
+}
+
+#section2 {
+    top: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    min-width: 1070px;
+    width: 100%;
+}
+
+#logo {
+  max-width: 500px;
+}
+
+#landing-btn {
+  width: 300px;
 }
 
 .home-container {
