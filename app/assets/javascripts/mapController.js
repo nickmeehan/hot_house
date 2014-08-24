@@ -16,7 +16,6 @@ MapController.prototype = {
     ajaxRequest.done(this.populateMap.bind(this)) 
   },
   getMarkerInfo: function(marker){
-    console.log(marker[0].markerIdentifier)
     var ajaxRequest = $.ajax({
       url: '/locations/' + marker[0].markerIdentifier,
       type: 'GET'
@@ -24,7 +23,7 @@ MapController.prototype = {
     ajaxRequest.done(this.showMarkerWindow.bind(this))
   },
   showMarkerWindow: function(response){
-    console.log(response)
+    this.view.putWindowOnMap(response)
   },
   addMarkerListeners: function(markers){
     var that = this
