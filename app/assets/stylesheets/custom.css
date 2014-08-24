@@ -1,7 +1,10 @@
 body {
   padding-top: 50px;
 }
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
-}
+
+#map-canvas {
+        height: 500px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px
+      }
