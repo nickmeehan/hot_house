@@ -26,7 +26,7 @@ MapView.prototype = {
     },
     putWindowOnMap: function(markerInfo){
         console.log(markerInfo)
-        var content = "<div class='row infowindow'><div class='col-lg-6'><img class='img-thumbnail' src='" + markerInfo.image_url_array[0] + "'></div><div class='col-lg-6'><h4>Bedrooms: " + markerInfo.bedroom_count + "</h4><h4>Baths: " + markerInfo.bathroom_count + "</h4><h4>Price: $" + markerInfo.price + "</h4><h4><a href='#'>See More</h4></div></div>"
+        var content = "<div class='row infowindow'><div class='col-lg-6'><img class='img-thumbnail' src='" + markerInfo.image_url_array[0] + "'></div><div class='col-lg-6'><h4>Bedrooms: " + markerInfo.bedroom_count + "</h4><h4>Baths: " + markerInfo.bathroom_count + "</h4><h4>Price: $" + markerInfo.price + "</h4><h4><a href='/homes/" + markerInfo.id + "'>See More</h4></div></div>"
         
         
          for (var i = 0; i < this.mappedMarkers.length; i++){
