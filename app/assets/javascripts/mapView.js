@@ -10,6 +10,7 @@ MapView.prototype = {
             scrollwheel: false,
         }
         this.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
     },
     putMarkersOnMap: function(markers){
         for (var i = 0; i < markers.length; i++) {
