@@ -16,6 +16,7 @@ MapController.prototype = {
     ajaxRequest.done(this.populateMap.bind(this)) 
   },
   getMarkerInfo: function(marker){
+    console.log(marker)
     var ajaxRequest = $.ajax({
       url: '/locations/' + marker[0].markerIdentifier,
       type: 'GET'
