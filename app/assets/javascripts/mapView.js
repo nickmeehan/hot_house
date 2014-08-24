@@ -11,6 +11,52 @@ MapView.prototype = {
         }
         this.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
+        $('#books').on('click', function() {
+            console.log(this)
+            var schoolsLayer = new google.maps.KmlLayer({
+                url: 'https://data.calgary.ca/_layouts/OpenData/DownloadDataset.ashx?DatasetId=PDC0-99999-99999-00204-P(CITYonlineDefault)&VariantId=2(CITYonlineDefault)',
+                map: this.map,
+                preserveViewport: true
+            });
+            schoolsLayer.setMap(this.map)
+        }.bind(this))
+
+        $('#leaf').on('click', function() {
+            console.log(this)
+            var parksLayer = new google.maps.KmlLayer({
+                url: 'https://data.calgary.ca/_layouts/OpenData/DownloadDataset.ashx?DatasetId=PDC0-99999-99999-00306-P(CITYonlineDefault)&VariantId=2(CITYonlineDefault)',
+                map: this.map,
+                preserveViewport: true
+            });
+            parksLayer.setMap(this.map)
+            
+        }.bind(this))
+
+        $('#cart').on('click', function() {
+            console.log(this)
+            var parksLayer = new google.maps.KmlLayer({
+                url: 'https://data.calgary.ca/_layouts/OpenData/DownloadDataset.ashx?DatasetId=PDC0-99999-99999-00306-P(CITYonlineDefault)&VariantId=2(CITYonlineDefault)',
+                map: this.map,
+                preserveViewport: true
+            });
+            parksLayer.setMap(this.map)
+            
+        }.bind(this))
+
+        $('#support').on('click', function() {
+            console.log(this)
+            var parksLayer = new google.maps.KmlLayer({
+                url: 'https://data.calgary.ca/_layouts/OpenData/DownloadDataset.ashx?DatasetId=PDC0-99999-99999-00201-P(CITYonlineDefault)&VariantId=2(CITYonlineDefault)',
+                map: this.map,
+                preserveViewport: true
+            });
+            parksLayer.setMap(this.map)
+            
+        }.bind(this))
+
+
+        
+
     },
     putMarkersOnMap: function(markers){
         for (var i = 0; i < markers.length; i++) {
