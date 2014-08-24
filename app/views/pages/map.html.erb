@@ -2,10 +2,40 @@
         <div class="col-md-3 col-sm-offset-1">
           <h1>Find Your House</h1>
             <p class="lead">Use this map as a way to quickly find your new place.</p>
-          </div>
-          <div class="col-md-8">
+                <input type="search" class="form-control" placeholder="Search here" /><br>
+            <p class="lead">Add map elements</p>
+             <div class="row">
+                <div class="col-md-4"><%= image_tag "aid.png", id:'fuck', class:'balls', size: "40" %></div>
+                <div class="col-md-4"><%= image_tag "books.png", id:'fuck', class:'balls', size: "40" %></div>
+                <div class="col-md-4"><%= image_tag "cart.png", id:'fuck', class:'balls', size: "40" %></div>
+             </div>
+             <hr/>
+              <div class="row">
+                <div class="col-md-4"><%= image_tag "coin.png", id:'fuck', class:'balls', size: "40" %></div>
+                <div class="col-md-4"><%= image_tag "food.png", id:'fuck', class:'balls', size: "40" %></div>
+                <div class="col-md-4"><%= image_tag "glass.png", id:'fuck', class:'balls', size: "40" %></div>
+             </div>
+              <hr/>
+             <div class="row">
+                <div class="col-md-4"><%= image_tag "leaf.png", id:'fuck', class:'balls', size: "40" %></div>
+                <div class="col-md-4"><%= image_tag "mug.png", id:'fuck', class:'balls', size: "40" %></div>
+                <div class="col-md-4"><%= image_tag "support.png", id:'fuck', class:'balls', size: "40" %></div>
+             </div>
+        </div>
+        <div class="col-md-8">
             <div id="map-canvas"></div>
-          </div>
-      </div>
+        </div>
+</div>
 
 <script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script>
+        $(document).ready(function() {
+        $(".balls").click(function(event) {
+            if ($(this).css('opacity') == '1')
+              $(this).animate({'opacity':0.5})
+            else
+              $(this).animate({'opacity':1})
+        });
+});
+</script>
