@@ -1,0 +1,37 @@
+<div class='home-container'>
+  <div class='row'>
+
+    <div class='col-md-7'>
+      <%= image_tag "#{@home.image_url_array.first}" %>
+
+      <div class='address'>
+        <h3><%= @home.address %></h3>
+      </div>
+      <div class='home-info'>
+        <h4>Price: $<%= @home.price %></h4>
+        <h4>Bedrooms: <%= @home.bedroom_count %></h4>
+        <h4>Bath: <%= @home.bathroom_count %></h4>
+      </div>
+    </div>
+    <div class='col-md-5'>
+      <div class='builder-info'>
+      <h1><%= @builder.name %></h1>
+        <div class='sales-info'>
+          <%= image_tag 'sales_center.png', id: 'sales-map' %>
+          <h3>Sales Center:</h3>
+          <h4>Address:</h4>
+            10 Chaparral Dr SE
+          <h4>Hours:</h4>
+            8:00am - 4:30pm M-F<br>
+            10:00am - 4:00pm SA-SU
+          <h4>Email:</h4>
+            <%= mail_to 'chris.bacon@devinecustomhomes.com' %>
+          <h4>Phone Number:</h4>
+            (403) 583-3327
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>

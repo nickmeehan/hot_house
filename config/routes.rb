@@ -7,6 +7,7 @@ HotHouse::Application.routes.draw do
   get '/communities', to: 'pages#map'
 
   resources :locations, only: [:index, :show]
+  resources :homes, only: [:show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -20,6 +20,7 @@ body {
   color: #000;
 }
 
+
 h4 {
     line-height: .8;
 }
@@ -29,4 +30,55 @@ h4 {
     width:100%;
     opacity: 0.8;
     min-height: 400px;
+}
+
+.home-container {
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.home-container img {
+  width: 100%;
+}
+
+.address {
+  background-color: #6bc535;
+}
+
+.address h3 {
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+.builder-info {
+  background-color: #D6D6D6;
+  padding: 15px;
+  width: 100%;
+}
+
+.builder-info h1 {
+  color: #FFFFFF;
+}
+
+.home-info {
+  margin-top: -10px;
+  background-color: #D6D6D6;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.home-info h4 {
+  margin-bottom: 20px;
+}
+
+.builder-info #sales-map {
+  height: 300px;
+  width: 100%;
+}
+
+.sales-info {
+  padding: 15px;
 }
