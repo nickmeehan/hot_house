@@ -16,9 +16,8 @@ MapController.prototype = {
     ajaxRequest.done(this.populateMap.bind(this)) 
   },
   getMarkerInfo: function(marker){
-    console.log(marker)
     var ajaxRequest = $.ajax({
-      url: '/locations/' + marker[0].markerIdentifier,
+      url: '/locations/' + marker.markerIdentifier,
       type: 'GET'
     })
     ajaxRequest.done(this.showMarkerWindow.bind(this))
@@ -29,10 +28,9 @@ MapController.prototype = {
   addMarkerListeners: function(markers){
     var that = this
      for (var i = 0; i < markers.length; i++){
-        google.maps.event.addListener(markers[i], 'click', function() {
-                 that.getMarkerInfo(markers)
-                 
-                 });
+        google.maps.event.addListener(markers[i], 'click', function(innerKey) {
+         that.getMarkerInfo(this)         
+        });
      }
   },
   populateMap: function(response) {
