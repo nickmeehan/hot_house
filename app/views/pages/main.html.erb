@@ -18,6 +18,10 @@
         <button type="button" class="btn btn-default community-btn">Quiet</button>
         <button type="button" class="btn btn-default community-btn">Okotoks</button>
         <button type="button" class="btn btn-default community-btn">Hospital</button>
+        <button type="button" class="btn btn-default community-btn">Pubs</button>
+        <button type="button" class="btn btn-default community-btn">Malls</button>
+        <button type="button" class="btn btn-default community-btn">Library</button>
+        <button type="button" class="btn btn-default community-btn">Downtown</button>
       </div>
     <div>
       <a id="landing-btn" href="/communities" class="btn btn-warning btn-lg"><strong>Search</strong> </a>
@@ -27,8 +31,7 @@
 
 <script>
         $(document).ready(function() {
-          console.log($('button'))
-        $("button").on('click', function(event) {
+        $(".community-btn").on('click', function(event) {
             $(this).toggleClass('community-btn-color');
         })
         });
