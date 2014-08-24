@@ -1,5 +1,6 @@
 function MapController(view) {
   this.view = view;
+  this.markers
 }
 
 MapController.prototype = {
@@ -12,29 +13,38 @@ MapController.prototype = {
       url: '/locations',
       type: 'GET'
     })
-    ajaxRequest.done(this.populateMap)
+    ajaxRequest.done(this.populateMap.bind(this)) 
+  },
+  getMarkerInfo: function(marker){
+    console.log(marker[0].markerIdentifier)
+    var ajaxRequest = $.ajax({
+      url: '/locations/' + marker[0].markerIdentifier,
+      type: 'GET'
+    })
+    ajaxRequest.done(this.showMarkerWindow.bind(this))
+  },
+  showMarkerWindow: function(response){
+    console.log(response)
+  },
+  addMarkerListeners: function(markers){
+    var that = this
+     for (var i = 0; i < markers.length; i++){
+        google.maps.event.addListener(markers[i], 'click', function() {
+                 that.getMarkerInfo(markers)
+                 
+                 });
+     }
   },
   populateMap: function(response) {
-    console.log(response)
+    this.markers = response
+    var mappedMarkers = this.view.putMarkersOnMap(this.markers)
+    this.addMarkerListeners(mappedMarkers)
   }
+  
+  
 }
-
-//var houses = [
-//    [-25.263882,132.044922, 1],
-//    [-23.363882,131.044922, 2],
-//    [-25.363882,131.144922, 3],
-//]
-            
+       
 
 
-//for (var i = 0; i < houses.length; i++) {
-//  var marker = new google.maps.Marker({
-//      position: new google.maps.LatLng(houses[i][0],houses[i][1]),
-//      map: map,
-//      title: 'Hello World!'  
-//  });
-//  }
-//}
 
-//google.maps.event.addDomListener(window, 'load', initialize);
 
