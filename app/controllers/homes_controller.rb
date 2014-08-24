@@ -1,10 +1,8 @@
 class HomesController < ApplicationController
 
   def show
-    @home = Home.find(1)
+    @home = Home.find(params[:id])
     @builder = @home.builder
-    p @home
-    p @builder
   end
 
 end
