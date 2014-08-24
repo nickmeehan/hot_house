@@ -14,7 +14,15 @@ body {
 h4 {
     line-height: .8;
 }
+.rounded {
+  border: 1px solid;
+  border-radius: 25px;
+}
 
+.rounded-white {
+  border: 1px solid white;
+  border-radius: 25px;
+}
 
 /* ========= NavBar ======== */
 
@@ -99,6 +107,7 @@ h4 {
   top: 20px;
   margin: 0 auto;
   width: 90%;
+  padding-bottom: 20px;
 }
 
 .home-container img {
@@ -121,7 +130,7 @@ h4 {
 }
 
 .builder-info h1 {
-  color: #FFFFFF;
+  color: #000;
 }
 
 .home-info {
@@ -134,6 +143,10 @@ h4 {
 
 .home-info h4 {
   margin-bottom: 20px;
+}
+
+#builder-name {
+  text-align: center;
 }
 
 .builder-info #sales-map {
