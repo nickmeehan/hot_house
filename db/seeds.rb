@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+data_list = [
+	["HB_1", 50.1, -114.1,"Address_1"],
+	["HB_2", 50.2, -114.2,"Address_2"]
+]
+
+data_list.each do |builder_name,latitude,longitude,address|
+	builder = Builder.create(name: builder_name)	
+	builder.homes << Home.create!(latitude: latitude, longitude: longitude, address: address)
+end
