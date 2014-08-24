@@ -8,9 +8,31 @@
 <div id="section2" class ="absolute-pos">
   <div class="sec2-body">
       <%= image_tag "logo.png", id:"logo" %>
-      <h3>Find your perfect new home!</h3>
+      <p class='lead'>Find your perfect community</p>
+      <div class='community-buttons-types'>
+        <button type="button" class="btn btn-default community-btn">Hikes</button>
+        <button type="button" class="btn btn-default community-btn">Coffee</button>
+        <button type="button" class="btn btn-default community-btn">Schools</button>
+        <button type="button" class="btn btn-default community-btn">Kids</button>
+        <button type="button" class="btn btn-default community-btn">Parks</button>
+        <button type="button" class="btn btn-default community-btn">Quiet</button>
+        <button type="button" class="btn btn-default community-btn">Okotoks</button>
+        <button type="button" class="btn btn-default community-btn">Hospital</button>
+        <button type="button" class="btn btn-default community-btn">Pubs</button>
+        <button type="button" class="btn btn-default community-btn">Malls</button>
+        <button type="button" class="btn btn-default community-btn">Library</button>
+        <button type="button" class="btn btn-default community-btn">Downtown</button>
+      </div>
     <div>
       <a id="landing-btn" href="/communities" class="btn btn-warning btn-lg"><strong>Search</strong> </a>
     </div>
   </div>
 </div>
+
+<script>
+        $(document).ready(function() {
+        $(".community-btn").on('click', function(event) {
+            $(this).toggleClass('community-btn-color');
+        })
+        });
+</script>

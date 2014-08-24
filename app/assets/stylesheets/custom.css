@@ -11,19 +11,28 @@ body {
         border: 1px solid;
         border-radius: 25px;
       }
-
-.navbar {
-  background-color: #1476d9;
-}
-
- {
-  color: #000;
-}
-
-
 h4 {
     line-height: .8;
 }
+
+
+/* ========= NavBar ======== */
+
+.navbar {
+  background-color: #1476d9;
+
+}
+.navbar .nav > li > a {
+    color: orange;
+    font-size: 1.25em;
+}
+#nav-logo {
+  height: 45px;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+
 
 /* ========= Landing Page ======== */
 
@@ -45,10 +54,11 @@ h4 {
 
 #section1 {
   overflow: hidden;
+  padding-top: 0px;
 }
 
 #section2 {
-    top: 220px;
+    top: 120px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -58,6 +68,26 @@ h4 {
 
 #logo {
   max-width: 500px;
+}
+
+.community-buttons-types {
+  width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 30px;
+  
+}
+.community-btn {
+  width: 125px;
+  opacity: 0.7;
+}
+.community-btn:nth-child(even) {
+  width: 100px;
+}
+.community-btn-color {
+    background-color: orange;
+    opacity: 0.9;
 }
 
 #landing-btn {
